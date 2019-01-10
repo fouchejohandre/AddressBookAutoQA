@@ -189,8 +189,32 @@ public class FirstTestCase {
 	}
 	
 	@Test
-	public static void testFacebook() throws Exception
+	public static void testGithub() throws Exception
 	{
+		GitHub gitHub  = new GitHub();
 		
+		WebDriver githubPage = gitHub.getGithubPage();
+		 
+		String username = "--";
+		String password = "--";
+		
+		Thread.sleep(2000);
+		
+		//Login
+		gitHub.Login(username, password, githubPage);
+		Thread.sleep(4000);
+		
+		//Goto Repo
+		gitHub.AccessRepo("AddressBookAutoQA", "", githubPage);
+		Thread.sleep(2000);
+		
+		//Clone or Download
+		gitHub.CloneOrDownload(githubPage);
+		
+		//View Insights, Commits, Branches
+		gitHub.ScrollTabs(githubPage);
+		
+		//Delete Repo
+		//gitHub.DeleteRepo("TestRepoName", githubPage);
 	}
 }
