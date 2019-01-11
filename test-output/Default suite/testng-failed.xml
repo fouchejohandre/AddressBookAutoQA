@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="automationFramework.FirstTestCase">
+      <class name="KatalonRecorder.reordedTestCase">
         <methods>
-          <include name="testGithub"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testUntitledTestCase"/>
         </methods>
-      </class> <!-- automationFramework.FirstTestCase -->
+      </class> <!-- KatalonRecorder.reordedTestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

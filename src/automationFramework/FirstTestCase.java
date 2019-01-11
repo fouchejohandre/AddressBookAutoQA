@@ -214,7 +214,7 @@ public class FirstTestCase {
 		//View Insights, Commits, Branches
 		gitHub.ScrollTabs(githubPage);
 		
-		//Delete Repo
+		
 		//gitHub.DeleteRepo("TestRepoName", githubPage);
 	}
 }
